@@ -168,13 +168,14 @@ docker exec -it jellyfin /usr/lib/jellyfin-ffmpeg/vainfo
 Pay attention, the name of the container could be different from mine. This line make shure we have hardware acceleration working via VA-API.
 <br>
 <br>
+<br>
 ```
 docker exec -it jellyfin /usr/lib/jellyfin-ffmpeg/ffmpeg -v verbose -init_hw_device vaapi=va -init_hw_device opencl@va
 ```
 ![d](https://github.com/IlTossico/Jellyfin-unRaid-Intel_Transcoding/assets/77573228/ba29cb3b-7079-4378-a27d-58cba2f93519)
 
 Pay attention, the name of the container could be different from mine. This line is good to see both VA-API, QSV and QSV with OpenCL.
-<br>
+
 <br>
 <br>
 
