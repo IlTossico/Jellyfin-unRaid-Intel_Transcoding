@@ -75,7 +75,6 @@ So, from the "APP" center, search for `Jellyfin` and download the repository fro
 On the installation od the docker, we want to add two new Variable:
 
 <br>
-<br>
 
 Click on `+ Add another Path, Port, Variable, Label or Device` and select it as `Device`:
 ```
