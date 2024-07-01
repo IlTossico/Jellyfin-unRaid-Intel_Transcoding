@@ -144,7 +144,7 @@ Go to `Control Panel > Playback > Transcoding` and select everything as the imag
 <br>
 <br>
 
-  **SAVE!!!**
+ ### **SAVE!!!**
 <br>
 <br>
 
@@ -168,7 +168,6 @@ docker exec -it jellyfin /usr/lib/jellyfin-ffmpeg/vainfo
 Pay attention, the name of the container could be different from mine. This line make shure we have hardware acceleration working via VA-API.
 <br>
 <br>
-
 ```
 docker exec -it jellyfin /usr/lib/jellyfin-ffmpeg/ffmpeg -v verbose -init_hw_device vaapi=va -init_hw_device opencl@va
 ```
