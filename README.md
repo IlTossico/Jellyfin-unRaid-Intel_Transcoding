@@ -83,7 +83,7 @@ Name:           --device=/dev/dri
 Value:          /dev/dri
 Description:    Jellyfin see the iGPU
 ```
-![aaaattura](https://github.com/IlTossico/Jellyfin-unRaid-Intel_Transcoding/assets/77573228/70389a3a-310d-4a27-900c-b48074ade6ae)
+![a](https://github.com/IlTossico/Jellyfin-unRaid-Intel_Transcoding/assets/77573228/b536bb9e-30c3-44e9-b3c7-f347a5eb3022)
 
 <br>
 <br>
