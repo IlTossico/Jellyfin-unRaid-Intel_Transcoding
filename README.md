@@ -176,6 +176,7 @@ docker exec -it jellyfin /usr/lib/jellyfin-ffmpeg/ffmpeg -v verbose -init_hw_dev
 Pay attention, the name of the container could be different from mine. This line is good to see both VA-API, QSV and QSV with OpenCL.
 <br>
 <br>
+<br>
 
 If you get the same resoult as mine, you are done! Just do a real try, try with your smarphone or TV to play a bigger file than you can and watch first on your unRaid Dashboard for the GPU Stats; and then on your Jellyfin Control panel, click on the `i` icon to see what Jellyfin say. You should see something like this: (pardon the Italian on the Jellyfin pic)
 
