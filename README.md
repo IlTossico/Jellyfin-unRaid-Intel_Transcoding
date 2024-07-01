@@ -102,6 +102,7 @@ Description:    OpenCL Docker Mod from linuxserver for Transcoding HDR content. 
 This one is optional, for who have issue transcoding HDR content, but considering i've tried my istance of Jellyfin after adding this one too, i suggest to add it anyway. 
 <br>
 <br>
+<br>
 
 There is another option, for who need it, i have't tried it, so i don't know if it works fine.
 The ability to use the RAM as transcoding folder, click on `+ Add another Path, Port, Variable, Label or Device` and select it as `Path`:
