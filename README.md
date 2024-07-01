@@ -20,24 +20,34 @@ You have a Intel CPU with iGPU from 7/8/9th gen up.
 
 Nothing fancy to do, taking for granted you alredy have installed the `Community Applications` plugin on your unRaid istance, then go to "APP" and search for `Intel` on the search bar and install the `Intel-GPU-TOP` plugin from the "ich777" repository. (searching directly for Intel-GPU-TOP give me nothing)
 Installing it, would done everything automatically.
+<br>
+<br>
 
 Just to be totally sure about permission, i would follow those simple CLI command below: 
+<br>
+<br>
 
 
 ```
 lspci -vnnn | perl -lne 'print if /^\d+\:.+(\[\S+\:\S+\])/' | grep VGA
 ```
 That's to see if you have any GPU available and "on" on your system, the one actually selected as primary GPU, in case you have more than one, it is the one that end with `[VGA controller]`.
+<br>
+<br>
 
 ```
 ls -la /dev/dri/
 ```
 With that you can see the 3D Core of your GPU, from my understanding `renderD128` is a standard name and what matter for us. 
+<br>
+<br>
 
 ```
 chown :video /dev/dri/
 ```
 To make sure Jellyfin have the right permission to use this device. (On some system the `video` Group can be named `render`, in case it give you a "invalid group" error)
+<br>
+<br>
 
 ![aaaattura](https://github.com/IlTossico/Jellyfin-unRaid-Intel_Transcoding/assets/77573228/f2f5a4da-2511-4a8e-b8d0-1fdbb68b29be)
 
@@ -45,6 +55,8 @@ To make sure Jellyfin have the right permission to use this device. (On some sys
 **2 - GPU Statistics**
 
 Another plugin to install, from the "APP" center, search for `GPU Statistics` and install it. Its only function is to add a Tab on the dashboard, to help us see if our GPU is working as intended. You can manage the plugin on the "Setting" tab and then from "GPU Statistics", just make sure you have selected the right GPU to show. 
+<br>
+<br>
 
 Alternatively we can see the iGPU usage from CLI with the command: 
 ```
@@ -147,6 +159,13 @@ If you get the same resoult as mine, you are done! Just do a real try, try with 
 ![ggg](https://github.com/IlTossico/Jellyfin-unRaid-Intel_Transcoding/assets/77573228/77af7485-e1bf-4e43-9c0a-d46ad8b81923)
 ![ccc](https://github.com/IlTossico/Jellyfin-unRaid-Intel_Transcoding/assets/77573228/ca38323e-78ba-4735-8df3-2410b93d2352)
 
+##
 
+**Useful Link**
 
+- https://github.com/linuxserver/docker-mods/tree/jellyfin-opencl-intel
+- https://forum.jellyfin.org/t-solved-hardware-acceleration-on-unraid-issues
+- https://forums.unraid.net/topic/144179-intel-n5105jasperlake-hw-transcode-with-binhex-jellyfin/
+- https://forums.unraid.net/topic/145424-jellyfin-8700k-transcoding/
+- https://www.reddit.com/r/unRAID/comments/166hpy7/please_help_me_getting_hw_transcoding_to_work/
 
